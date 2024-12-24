@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ata"
+version = "1.0.0"
+description = "AnmiTali Archive - Modern Terminal Archiver"
+authors = [
+    {name = "AnmiTaliDev", email = "anmitali@anmitali.kz"}
+]
+requires-python = ">=3.8"
+license = {text = "GPL-3.0-or-later"}
+keywords = ["archive", "compression", "encryption", "cli", "utility"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: System :: Archiving",
+    "Topic :: System :: Archiving :: Compression",
+    "Topic :: Utilities"
+]
+
+dependencies = [
+    "click>=8.0.0",
+    "cryptography>=36.0.0",
+    "zstandard>=0.15.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/nuros-linux/ata"
+Repository = "https://github.com/nuros-linux/ata.git"
+Issues = "https://github.com/nuros-linux/ata/issues"
+
+[project.scripts]
+ata = "ata.__main__:main"
+
+[tool.setuptools]
+packages = ["ata"]
+package-dir = {"" = "src"}
